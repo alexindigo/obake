@@ -1,0 +1,5 @@
+coverage
+instrumented
+node_modules
+
+*.log

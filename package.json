@@ -1,0 +1,58 @@
+{
+  "name": "obake",
+  "version": "1.0.0",
+  "description": "Pipe javascript into phantomjs, print the output, writing test coverage to disk along the way",
+  "main": "index.js",
+  "bin": {
+    "obake": "./index.js"
+  },
+  "scripts": {
+    "lint": "eslint *.js */*.js",
+    "pretest": "rimraf coverage; mkdirp coverage",
+    "test": "tape test/test-*.js",
+    "posttest": "istanbul report lcov text-summary"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexindigo/obake.git"
+  },
+  "keywords": [
+    "browser",
+    "headless",
+    "testing",
+    "evaluate",
+    "pipe",
+    "stdin",
+    "coverage",
+    "istanbul",
+    "phantom",
+    "phantomjs"
+  ],
+  "author": "Alex Indigo <iam@alexindigo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexindigo/obake/issues"
+  },
+  "homepage": "https://github.com/alexindigo/obake#readme",
+  "dependencies": {
+    "envar": "^2.0.0",
+    "ghostface": "^1.5.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "browserify-istanbul": "^1.0.0",
+    "concat-stream": "^1.5.1",
+    "cross-spawn": "^2.1.5",
+    "end-of-stream": "^1.1.0",
+    "istanbul": "^0.4.2",
+    "mkdirp": "^0.5.1",
+    "phantomjs-prebuilt": "^2.1.4",
+    "pre-commit": "^1.1.2",
+    "rimraf": "^2.5.2",
+    "tape": "^4.4.0"
+  }
+}
