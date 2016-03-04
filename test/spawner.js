@@ -1,6 +1,7 @@
 var spawn  = require('cross-spawn');
 var concat = require('concat-stream');
 var eos    = require('end-of-stream');
+var path   = require('path');
 
 // Public API
 module.exports = spawner;
@@ -149,6 +150,12 @@ function exec(cmd, callback)
 
   // make it array
   args = Array.isArray(args) ? args : [args];
+
+  // make path args windows compatible
+  args = args.map(function(arg)
+  {
+    return path.join(arg);
+  });
 
   proc = spawn(name, args);
 

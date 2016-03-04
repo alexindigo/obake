@@ -1,6 +1,6 @@
 {
   "name": "obake",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Pipe javascript into phantomjs, print the output, writing test coverage to disk along the way",
   "main": "index.js",
   "bin": {
