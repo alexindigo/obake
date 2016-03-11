@@ -19,7 +19,7 @@ var obake = module.exports = {
   getArgv    : getArgv,
   getGhost   : getGhost,
   ghostface  : getGhost(path.resolve(__dirname, envar('phantomjs'))),
-  destination: path.resolve(__dirname, envar('dir'), envar('file')),
+  destination: path.resolve(process.cwd(), envar('dir'), envar('file')),
   adapterPath: path.resolve(__dirname, 'adapters', envar('adapter'))
 };
 

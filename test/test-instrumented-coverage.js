@@ -12,7 +12,7 @@ test('instrumented, no coverage', function(t)
     common.beforeTest(source).concat([
       [
         {'browserify': ['-t', 'browserify-istanbul', 'fixture/test.js']},
-        {'node': ['instrumented/' + source + '/bin/obake.js', '--coverage']}
+        {'node': ['instrumented/' + source + '/bin/obake.js', '--coverage', '--dir', 'instrumented/' + source + '/coverage']}
       ]
     ],
     common.afterTest(source)
