@@ -1,10 +1,10 @@
 {
   "name": "obake",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pipe javascript into phantomjs, print the output, writing test coverage to disk along the way",
   "main": "index.js",
   "bin": {
-    "obake": "./index.js"
+    "obake": "./bin/obake.js"
   },
   "scripts": {
     "lint": "eslint *.js */*.js",
