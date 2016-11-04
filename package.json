@@ -47,7 +47,7 @@
     "browserify-istanbul": "^1.0.0",
     "concat-stream": "^1.5.1",
     "coveralls": "^2.11.8",
-    "cross-spawn": "^2.1.5",
+    "cross-spawn": "^5.0.1",
     "end-of-stream": "^1.1.0",
     "eslint": "^2.2.0",
     "istanbul": "^0.4.2",
